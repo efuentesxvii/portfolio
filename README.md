@@ -2,7 +2,7 @@
 
 Personal portfolio website built with vanilla HTML, CSS, and JavaScript. Single-page design featuring my background, skills, and projects.
 
-🔗 **Live site:** [eddiesfuentes.com](https://eddiesfuentes.com) *(update with your domain)*
+🔗 **Live site:** [eddiefuentes.dev](https://eddiefuentes.dev) *(update with your domain)*
 
 ---
 
