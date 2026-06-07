@@ -8,7 +8,7 @@ Personal portfolio website built with vanilla HTML, CSS, and JavaScript. Single-
 
 ## About
 
-A clean, single-page portfolio showcasing my work as a CS graduate with a focus on AI-powered applications, Android development, and web interfaces. Built from scratch — no frameworks, no dependencies, just HTML, CSS, and a little JS.
+A clean, single-page portfolio showcasing my work as a CS graduate with a focus on AI-powered applications, cybersecurity, Android development, and web interfaces. Built from scratch — no frameworks, no dependencies, just HTML, CSS, and a little JS.
 
 ---
 
