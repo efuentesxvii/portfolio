@@ -202,23 +202,19 @@
     align-items: start;
   }
  
-  .about-photo-placeholder {
+  .about-photo {
     aspect-ratio: 4/5;
-    background: linear-gradient(135deg, #ddd8d0 0%, #c8c2b8 100%);
     border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: #888;
-    font-size: 0.85rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ddd8d0 0%, #c8c2b8 100%);
   }
- 
-  .about-photo-placeholder svg {
-    width: 2.5rem;
-    height: 2.5rem;
-    opacity: 0.4;
+
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
  
   .about-text h2 {
@@ -272,6 +268,23 @@
     border-radius: 2rem;
   }
  
+  /* PROJECT BADGES */
+  .project-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 2rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badge-security { background: #e8f4fd; color: #1a6fa8; }
+  .badge-ai       { background: var(--accent-light); color: #1a9e74; }
+  .badge-web      { background: #fdf3e8; color: #a87c1a; }
+  .badge-java     { background: #fde8e8; color: #a81a1a; }
+
   /* PROJECTS */
   .projects-grid {
     display: grid;
@@ -460,7 +473,7 @@
 <section id="hero" style="padding-left: 3rem; padding-right: 3rem;">
   <p class="hero-eyebrow fade-up">Based in Long Beach, CA</p>
   <h1 class="hero-title fade-up delay-1">Building things<br>that <em>matter.</em></h1>
-  <p class="hero-sub fade-up delay-2">M.S. Computer Science — developing AI-powered applications, Android experiences, and clean web interfaces.</p>
+  <p class="hero-sub fade-up delay-2">M.S. Computer Science — building at the intersection of cybersecurity, AI, and software engineering.</p>
   <div class="hero-ctas fade-up delay-3">
     <a href="#projects" class="btn-primary">View my work</a>
     <a href="#contact" class="btn-outline">Get in touch</a>
@@ -473,17 +486,14 @@
 <section id="about">
   <p class="section-label">About</p>
   <div class="about-grid">
-    <div class="about-photo-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-      </svg>
-      <span>Photo coming soon</span>
+    <div class="about-photo">
+      <img src="profile.png" alt="Eddie Fuentes">
     </div>
     <div class="about-text">
-      <h2>Developer with a passion for practical AI.</h2>
-      <p>I'm Eddie Fuentes, a Computer Science graduate with an M.S. degree and a focus on building software that solves real problems. My capstone project, Meals AI, is a fully deployed Android app that uses machine learning and Google Vision API to generate personalized meal plans.</p>
-      <p>Beyond mobile, I build on the web — Formation & Flow is a live football news site I designed and developed from scratch. I'm drawn to roles where technology meets people, whether that's client-facing product work or security-conscious development.</p>
-      <p>Currently open to full-time opportunities in tech — let's build something.</p>
+      <h2>Developer with a focus on security and practical AI.</h2>
+      <p>I'm Eddie Fuentes, a Computer Science graduate with an M.S. degree, building software at the intersection of application security, AI, and mobile development.</p>
+      <p>My work spans from cipher.chk — a password security analyzer with entropy modeling, k-anonymity breach detection, and a full STRIDE threat model — to Meals AI, an Android capstone that uses Google Vision API and AI-driven recommendations to generate personalized meal plans.</p>
+      <p>Currently open to full-time opportunities in cybersecurity and software engineering — let's build something.</p>
     </div>
   </div>
 </section>
@@ -497,6 +507,7 @@
     <div class="skill-card">
       <h3>Languages</h3>
       <div class="skill-tags">
+        <span class="tag">Python</span>
         <span class="tag">Kotlin</span>
         <span class="tag">Java</span>
         <span class="tag">JavaScript</span>
@@ -505,30 +516,33 @@
       </div>
     </div>
     <div class="skill-card">
-      <h3>Mobile & AI</h3>
+      <h3>Security</h3>
       <div class="skill-tags">
+        <span class="tag">Threat Modeling</span>
+        <span class="tag">STRIDE</span>
+        <span class="tag">k-Anonymity</span>
+        <span class="tag">Entropy Analysis</span>
+        <span class="tag">Bandit</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Frameworks & APIs</h3>
+      <div class="skill-tags">
+        <span class="tag">FastAPI</span>
         <span class="tag">Android</span>
         <span class="tag">Firebase</span>
         <span class="tag">Google Vision API</span>
-        <span class="tag">Material Design</span>
+        <span class="tag">REST APIs</span>
       </div>
     </div>
     <div class="skill-card">
-      <h3>Tools & Concepts</h3>
+      <h3>Tools & Practice</h3>
       <div class="skill-tags">
         <span class="tag">Git & GitHub</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">pytest</span>
+        <span class="tag">GitHub Actions</span>
         <span class="tag">Android Studio</span>
-        <span class="tag">REST APIs</span>
-        <span class="tag">Data Structures</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <h3>Interests</h3>
-      <div class="skill-tags">
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">AI/ML</span>
-        <span class="tag">UX Design</span>
-        <span class="tag">CTFs</span>
       </div>
     </div>
   </div>
@@ -541,6 +555,20 @@
   <p class="section-label">Projects</p>
   <div class="projects-grid">
  
+    <div class="project-card">
+      <span class="project-badge badge-security">Security · Python · API</span>
+      <h3>cipher.chk</h3>
+      <p>A full-stack password security analyzer featuring Shannon entropy scoring, pattern detection (keyboard walks, l33tspeak, dates), GPU-calibrated crack-time modeling, and a k-anonymity HIBP breach lookup — plaintext never leaves the server. Includes a STRIDE threat model and CI/CD pipeline.</p>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">FastAPI</span>
+          <span class="stack-pill">JavaScript</span>
+        </div>
+        <a href="https://efuentesxvii.github.io/cipher.chk" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
     <div class="project-card">
       <span class="project-badge badge-ai">AI · Android · Capstone</span>
       <h3>Meals AI</h3>
@@ -596,7 +624,6 @@
       <a href="mailto:efuentesxvii@gmail.com" class="contact-link primary">Email Me</a>
       <a href="https://linkedin.com/in/eddiefuentes" target="_blank" class="contact-link">LinkedIn</a>
       <a href="https://github.com/efuentesxvii" target="_blank" class="contact-link">GitHub</a>
-      <a href="https://formationandflow.co" target="_blank" class="contact-link">Formation & Flow</a>
     </div>
   </div>
 </section>
